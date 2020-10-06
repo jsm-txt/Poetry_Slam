@@ -35,16 +35,28 @@ def line_printed_backwards(line_list):
 
 def lines_printed_random(line_list):
     size = len(line_list)-1
+
     for i in range(len(line_list)):
         random = randint(0, size)
         print(line_list[random])
 
+def lines_printed_custom(line_list):
+    for i in range(len(line_list)):
+        if (i % 2) == 0:
+            pass
+        else:
+            print(line_list[i])
 
+    for i in range(len(line_list)):
+        if (i % 2) == 0:
+            print(line_list[i])
+        else:
+            pass
 
-
-
+    
 
 poemlist = get_file_lines(poem_file)
-lines_printed_random(poemlist)
+lines_printed_custom(poemlist)
 
 #line_printed_backwards(get_file_lines(poem_file))
+
