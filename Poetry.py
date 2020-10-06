@@ -12,11 +12,14 @@ poem = [
 "All that we see or seem",
 "Is but a dream within a dream."
 ]
+
 with open(poem_file,"w") as outfile:
     for i in poem:
         outfile.writelines(i + "\n")
 outfile.close()
 
-infile = open(poem_file,"r")
-print(infile.read())
-infile.close()
+
+def get_file_lines(filename):
+    infile = open(poem_file,"r")
+    print(infile.read())
+    infile.close()
