@@ -1,3 +1,5 @@
+from random import randint
+
 poem_file = "poem.txt"
 poem = [
 "Take this kiss upon the brow!",
@@ -30,11 +32,19 @@ def line_printed_backwards(line_list):
 
     for i in range(len(line_list)):
         print(f'{size-i + 1} {line_list[size - i]}')
-        
+
+def lines_printed_random(line_list):
+    size = len(line_list)-1
+    for i in range(len(line_list)):
+        random = randint(0, size)
+        print(line_list[random])
+
+
+
+
 
 
 poemlist = get_file_lines(poem_file)
-
-line_printed_backwards(poemlist)
+lines_printed_random(poemlist)
 
 #line_printed_backwards(get_file_lines(poem_file))
