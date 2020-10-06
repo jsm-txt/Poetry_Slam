@@ -21,5 +21,20 @@ outfile.close()
 
 def get_file_lines(filename):
     infile = open(poem_file,"r")
-    print(infile.read())
+    poemlines = infile.readlines()
     infile.close()
+    return poemlines
+
+def line_printed_backwards(line_list):
+    size = len(line_list)-1
+
+    for i in range(len(line_list)):
+        print(f'{size-i + 1} {line_list[size - i]}')
+        
+
+
+poemlist = get_file_lines(poem_file)
+
+line_printed_backwards(poemlist)
+
+#line_printed_backwards(get_file_lines(poem_file))
