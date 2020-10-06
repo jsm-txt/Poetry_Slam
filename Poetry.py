@@ -2,6 +2,7 @@
 from random import randint
 
 #Writes a a list to file name poem.txt
+#A dream within a dream by edgar allen poe
 poem_file = "poem.txt"
 poem = [
 "Take this kiss upon the brow!",
