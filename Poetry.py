@@ -56,7 +56,19 @@ def lines_printed_custom(line_list):
     
 
 poemlist = get_file_lines(poem_file)
-lines_printed_custom(poemlist)
+response = ''
 
-#line_printed_backwards(get_file_lines(poem_file))
+while response != "done":
+    print("How would you like your poem?")
+    print("Type backwards for a backword reading,")
+    print("Type random for random reading, ")
+    print("Type custom for a even then odd reading")
+    response = input("Type done to exit: " )
+    if response == "backwards":
+        line_printed_backwards(poemlist)
+    if response == "random":
+        lines_printed_random(poemlist)
+    if response == "custom":
+        lines_printed_custom(poemlist)
 
+    
